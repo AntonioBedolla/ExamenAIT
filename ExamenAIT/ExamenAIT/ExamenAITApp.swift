@@ -11,7 +11,9 @@ import SwiftUI
 struct ExamenAITApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CharacterListView(
+                viewModel: CharacterListViewModel(apiService: DependencyContainer.shared.apiService)
+            )
         }
     }
 }

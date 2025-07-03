@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		C804E5C02E16350E009B312A /* ExamenAITApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5BF2E16350E009B312A /* ExamenAITApp.swift */; };
-		C804E5C22E16350E009B312A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5C12E16350E009B312A /* ContentView.swift */; };
 		C804E5C42E163515009B312A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C804E5C32E163515009B312A /* Assets.xcassets */; };
 		C804E5C72E163515009B312A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C804E5C62E163515009B312A /* Preview Assets.xcassets */; };
 		C804E5D12E163516009B312A /* ExamenAITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5D02E163516009B312A /* ExamenAITTests.swift */; };
 		C804E5DB2E163516009B312A /* ExamenAITUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5DA2E163516009B312A /* ExamenAITUITests.swift */; };
 		C804E5DD2E163516009B312A /* ExamenAITUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5DC2E163516009B312A /* ExamenAITUITestsLaunchTests.swift */; };
+		C804E5EE2E16CA26009B312A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5ED2E16CA25009B312A /* Character.swift */; };
+		C804E5F12E16CA6F009B312A /* APIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5F02E16CA6F009B312A /* APIServiceProtocol.swift */; };
+		C804E5F42E16CAE0009B312A /* MockAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5F32E16CAE0009B312A /* MockAPIService.swift */; };
+		C804E5F62E16CCAB009B312A /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5F52E16CCAB009B312A /* CharacterListViewModel.swift */; };
+		C804E5F82E16CCCF009B312A /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5F72E16CCCF009B312A /* CharacterDetailViewModel.swift */; };
+		C804E5FA2E16CD0F009B312A /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5F92E16CD0F009B312A /* DependencyContainer.swift */; };
+		C804E5FC2E16CE4A009B312A /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5FB2E16CE4A009B312A /* CharacterListView.swift */; };
+		C804E5FE2E16CE74009B312A /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5FD2E16CE74009B312A /* CharacterDetailView.swift */; };
+		C804E6002E16CF2B009B312A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5FF2E16CF2B009B312A /* MapView.swift */; };
+		C804E6022E16CF7E009B312A /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E6012E16CF7E009B312A /* MapLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		C804E5BC2E16350E009B312A /* ExamenAIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenAIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C804E5BF2E16350E009B312A /* ExamenAITApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamenAITApp.swift; sourceTree = "<group>"; };
-		C804E5C12E16350E009B312A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C804E5C32E163515009B312A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C804E5C62E163515009B312A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C804E5CC2E163516009B312A /* ExamenAITTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExamenAITTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +52,16 @@
 		C804E5D62E163516009B312A /* ExamenAITUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExamenAITUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C804E5DA2E163516009B312A /* ExamenAITUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamenAITUITests.swift; sourceTree = "<group>"; };
 		C804E5DC2E163516009B312A /* ExamenAITUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamenAITUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C804E5ED2E16CA25009B312A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		C804E5F02E16CA6F009B312A /* APIServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceProtocol.swift; sourceTree = "<group>"; };
+		C804E5F32E16CAE0009B312A /* MockAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAPIService.swift; sourceTree = "<group>"; };
+		C804E5F52E16CCAB009B312A /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		C804E5F72E16CCCF009B312A /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		C804E5F92E16CD0F009B312A /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		C804E5FB2E16CE4A009B312A /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		C804E5FD2E16CE74009B312A /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		C804E5FF2E16CF2B009B312A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		C804E6012E16CF7E009B312A /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +113,12 @@
 			isa = PBXGroup;
 			children = (
 				C804E5EC2E16C93A009B312A /* Models */,
-				C804E5EB2E16C931009B312A /* Repositories */,
+				C804E5EF2E16CA4B009B312A /* Protocols */,
+				C804E5EB2E16C931009B312A /* Services */,
+				C804E5F22E16CAB9009B312A /* Utils */,
 				C804E5EA2E16C925009B312A /* ViewModels */,
 				C804E5E92E16C91D009B312A /* Views */,
 				C804E5BF2E16350E009B312A /* ExamenAITApp.swift */,
-				C804E5C12E16350E009B312A /* ContentView.swift */,
 				C804E5C32E163515009B312A /* Assets.xcassets */,
 				C804E5C52E163515009B312A /* Preview Content */,
 			);
@@ -134,6 +153,9 @@
 		C804E5E92E16C91D009B312A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C804E5FB2E16CE4A009B312A /* CharacterListView.swift */,
+				C804E5FD2E16CE74009B312A /* CharacterDetailView.swift */,
+				C804E5FF2E16CF2B009B312A /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,22 +163,43 @@
 		C804E5EA2E16C925009B312A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C804E5F52E16CCAB009B312A /* CharacterListViewModel.swift */,
+				C804E5F72E16CCCF009B312A /* CharacterDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		C804E5EB2E16C931009B312A /* Repositories */ = {
+		C804E5EB2E16C931009B312A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C804E5F32E16CAE0009B312A /* MockAPIService.swift */,
 			);
-			path = Repositories;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C804E5EC2E16C93A009B312A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C804E5ED2E16CA25009B312A /* Character.swift */,
+				C804E6012E16CF7E009B312A /* MapLocation.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C804E5EF2E16CA4B009B312A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C804E5F02E16CA6F009B312A /* APIServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C804E5F22E16CAB9009B312A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C804E5F92E16CD0F009B312A /* DependencyContainer.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C804E5C22E16350E009B312A /* ContentView.swift in Sources */,
+				C804E5F82E16CCCF009B312A /* CharacterDetailViewModel.swift in Sources */,
+				C804E5F12E16CA6F009B312A /* APIServiceProtocol.swift in Sources */,
+				C804E5F42E16CAE0009B312A /* MockAPIService.swift in Sources */,
+				C804E6002E16CF2B009B312A /* MapView.swift in Sources */,
+				C804E5FC2E16CE4A009B312A /* CharacterListView.swift in Sources */,
+				C804E5EE2E16CA26009B312A /* Character.swift in Sources */,
+				C804E5FE2E16CE74009B312A /* CharacterDetailView.swift in Sources */,
+				C804E6022E16CF7E009B312A /* MapLocation.swift in Sources */,
+				C804E5F62E16CCAB009B312A /* CharacterListViewModel.swift in Sources */,
+				C804E5FA2E16CD0F009B312A /* DependencyContainer.swift in Sources */,
 				C804E5C02E16350E009B312A /* ExamenAITApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
