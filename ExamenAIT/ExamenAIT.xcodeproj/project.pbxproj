@@ -23,6 +23,12 @@
 		C804E5FE2E16CE74009B312A /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5FD2E16CE74009B312A /* CharacterDetailView.swift */; };
 		C804E6002E16CF2B009B312A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E5FF2E16CF2B009B312A /* MapView.swift */; };
 		C804E6022E16CF7E009B312A /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E6012E16CF7E009B312A /* MapLocation.swift */; };
+		C804E6042E173B28009B312A /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E6032E173B28009B312A /* APIService.swift */; };
+		C804E6062E17506F009B312A /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E6052E17506F009B312A /* CharacterRow.swift */; };
+		C804E6082E1756FB009B312A /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E6072E1756FB009B312A /* Episode.swift */; };
+		C804E60B2E175A53009B312A /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E60A2E175A53009B312A /* FavoritesManager.swift */; };
+		C804E60D2E175AD0009B312A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E60C2E175AD0009B312A /* FavoritesView.swift */; };
+		C804E60F2E1763BD009B312A /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E60E2E1763BD009B312A /* CharacterListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		C804E5FD2E16CE74009B312A /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		C804E5FF2E16CF2B009B312A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C804E6012E16CF7E009B312A /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
+		C804E6032E173B28009B312A /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C804E6052E17506F009B312A /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
+		C804E6072E1756FB009B312A /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		C804E60A2E175A53009B312A /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		C804E60C2E175AD0009B312A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		C804E60E2E1763BD009B312A /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +126,7 @@
 			children = (
 				C804E5EC2E16C93A009B312A /* Models */,
 				C804E5EF2E16CA4B009B312A /* Protocols */,
+				C804E6092E175A2D009B312A /* Repositories */,
 				C804E5EB2E16C931009B312A /* Services */,
 				C804E5F22E16CAB9009B312A /* Utils */,
 				C804E5EA2E16C925009B312A /* ViewModels */,
@@ -137,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				C804E5D02E163516009B312A /* ExamenAITTests.swift */,
+				C804E60E2E1763BD009B312A /* CharacterListViewModelTests.swift */,
 			);
 			path = ExamenAITTests;
 			sourceTree = "<group>";
@@ -156,6 +170,8 @@
 				C804E5FB2E16CE4A009B312A /* CharacterListView.swift */,
 				C804E5FD2E16CE74009B312A /* CharacterDetailView.swift */,
 				C804E5FF2E16CF2B009B312A /* MapView.swift */,
+				C804E6052E17506F009B312A /* CharacterRow.swift */,
+				C804E60C2E175AD0009B312A /* FavoritesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				C804E5F32E16CAE0009B312A /* MockAPIService.swift */,
+				C804E6032E173B28009B312A /* APIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -182,6 +199,7 @@
 			children = (
 				C804E5ED2E16CA25009B312A /* Character.swift */,
 				C804E6012E16CF7E009B312A /* MapLocation.swift */,
+				C804E6072E1756FB009B312A /* Episode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +218,14 @@
 				C804E5F92E16CD0F009B312A /* DependencyContainer.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C804E6092E175A2D009B312A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				C804E60A2E175A53009B312A /* FavoritesManager.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,15 +359,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C804E5F82E16CCCF009B312A /* CharacterDetailViewModel.swift in Sources */,
+				C804E60B2E175A53009B312A /* FavoritesManager.swift in Sources */,
 				C804E5F12E16CA6F009B312A /* APIServiceProtocol.swift in Sources */,
 				C804E5F42E16CAE0009B312A /* MockAPIService.swift in Sources */,
 				C804E6002E16CF2B009B312A /* MapView.swift in Sources */,
 				C804E5FC2E16CE4A009B312A /* CharacterListView.swift in Sources */,
 				C804E5EE2E16CA26009B312A /* Character.swift in Sources */,
+				C804E6062E17506F009B312A /* CharacterRow.swift in Sources */,
 				C804E5FE2E16CE74009B312A /* CharacterDetailView.swift in Sources */,
 				C804E6022E16CF7E009B312A /* MapLocation.swift in Sources */,
+				C804E6082E1756FB009B312A /* Episode.swift in Sources */,
 				C804E5F62E16CCAB009B312A /* CharacterListViewModel.swift in Sources */,
+				C804E60D2E175AD0009B312A /* FavoritesView.swift in Sources */,
 				C804E5FA2E16CD0F009B312A /* DependencyContainer.swift in Sources */,
+				C804E6042E173B28009B312A /* APIService.swift in Sources */,
 				C804E5C02E16350E009B312A /* ExamenAITApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C804E60F2E1763BD009B312A /* CharacterListViewModelTests.swift in Sources */,
 				C804E5D12E163516009B312A /* ExamenAITTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -508,6 +541,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ExamenAIT/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Usamos Face ID para proteger tu lista de favoritos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -536,6 +570,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"ExamenAIT/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Usamos Face ID para proteger tu lista de favoritos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

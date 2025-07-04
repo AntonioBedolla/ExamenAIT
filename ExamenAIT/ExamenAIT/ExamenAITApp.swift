@@ -11,9 +11,19 @@ import SwiftUI
 struct ExamenAITApp: App {
     var body: some Scene {
         WindowGroup {
-            CharacterListView(
-                viewModel: CharacterListViewModel(apiService: DependencyContainer.shared.apiService)
-            )
+            TabView {
+                CharacterListView(
+                    viewModel: CharacterListViewModel(apiService: DependencyContainer.shared.apiService)
+                )
+                .tabItem {
+                    Label("Personajes", systemImage: "person.3")
+                }
+
+                FavoritesView()
+                    .tabItem {
+                        Label("Favoritos", systemImage: "heart")
+                    }
+            }
         }
     }
 }

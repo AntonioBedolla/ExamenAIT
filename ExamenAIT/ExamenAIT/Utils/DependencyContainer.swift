@@ -10,5 +10,6 @@ import Foundation
 class DependencyContainer {
     static let shared = DependencyContainer()
 
-    var apiService: APIServiceProtocol = MockAPIService()
+    //var apiService: APIServiceProtocol = MockAPIService()
+    var apiService: APIServiceProtocol = APIService()
 }

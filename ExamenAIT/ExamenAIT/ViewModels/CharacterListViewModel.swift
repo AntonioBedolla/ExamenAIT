@@ -8,25 +8,65 @@
 import Foundation
 
 class CharacterListViewModel: ObservableObject {
-    @Published var characters: [Character] = []
+        @Published var characters: [Character] = []
+        @Published var isLoading: Bool = false
+        @Published var error: String?
+        @Published var hasMore: Bool = true
     
-    private let apiService: APIServiceProtocol
+      // Filtros
+        @Published var searchText: String = ""
+        @Published var selectedStatus: String = ""
+        @Published var selectedSpecies: String = ""
 
-    init(apiService: APIServiceProtocol) {
-        self.apiService = apiService
-        fetchCharacters()
-    }
+        private var currentPage = 1
 
-    func fetchCharacters() {
-        apiService.fetchCharacters { [weak self] result in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let data):
-                    self?.characters = data
-                case .failure(let error):
-                    print("Error:", error)
-                }
-            }
+        private let apiService: APIServiceProtocol
+
+        init(apiService: APIServiceProtocol) {
+            self.apiService = apiService
+            fetchCharacters(reset: true)
         }
+
+    func fetchCharacters(reset: Bool = false) {
+            guard !isLoading else { return }
+            
+            if reset {
+                characters = []
+                currentPage = 1
+                hasMore = true
+            }
+            guard hasMore else { return }
+            isLoading = true
+
+        apiService.fetchCharacters(
+                    page: currentPage,
+                    name: searchText,
+                    status: selectedStatus,
+                    species: selectedSpecies
+                ) { [weak self] result in
+                    DispatchQueue.main.async {
+                        self?.isLoading = false
+
+                        switch result {
+                        case .success(let charactersPage):
+                            if charactersPage.results.isEmpty {
+                                self?.hasMore = false
+                            } else {
+                                self?.characters += charactersPage.results
+                                self?.currentPage += 1
+                            }
+                        case .failure(let error):
+                            self?.error = error.localizedDescription
+                        }
+                    }
+                }
+        }
+    
+    func applyFilters() {
+            fetchCharacters(reset: true)
+        }
+    
+    func refresh() {
+        applyFilters()
     }
-}
+    }

@@ -9,19 +9,23 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @State private var region = MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 34.0522, longitude: -118.2437), // Los Ángeles
-            span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
-        )
+    let location: MapLocation
+    
+        @State private var region: MKCoordinateRegion
+
+        init(location: MapLocation) {
+            self.location = location
+            _region = State(initialValue: MKCoordinateRegion(
+                center: location.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+            ))
+        }
 
         var body: some View {
-            Map(coordinateRegion: $region, annotationItems: [MapLocation.example]) { location in
-                MapMarker(coordinate: location.coordinate, tint: .blue)
+            Map(coordinateRegion: $region, annotationItems: [location]) { loc in
+                MapMarker(coordinate: loc.coordinate, tint: .blue)
             }
             .navigationTitle("Ubicación")
+            .navigationBarTitleDisplayMode(.inline)
         }
-}
-
-#Preview {
-    MapView()
 }

@@ -8,5 +8,12 @@
 import Foundation
 
 protocol APIServiceProtocol {
-    func fetchCharacters(completion: @escaping (Result<[Character], Error>) -> Void)
+    func fetchCharacters(
+        page: Int,
+        name: String?,
+        status: String?,
+        species: String?,
+        completion: @escaping (Result<CharacterAPIResponse, Error>) -> Void)
+    
+    func fetchEpisodes(urls: [String], completion: @escaping (Result<[Episode], Error>) -> Void)
 }
