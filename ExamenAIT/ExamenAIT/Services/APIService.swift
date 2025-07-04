@@ -89,7 +89,8 @@ class APIService: APIServiceProtocol {
         let info: Info
         let results: [Character]
 
-        struct Info: Decodable {
-            let next: String?
-        }
+        
     }
+struct Info: Decodable {
+    let next: String?
+}

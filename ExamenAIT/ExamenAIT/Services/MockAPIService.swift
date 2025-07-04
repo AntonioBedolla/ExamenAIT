@@ -27,8 +27,13 @@ class MockAPIService: APIServiceProtocol {
                 image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
                 episode: ["https://rickandmortyapi.com/api/episode/1"]
             )
-
             
+            let response = CharacterAPIResponse(
+                        info: Info(next: nil),
+                        results: [mockCharacter]
+                    )
+
+                    completion(.success(response))
         }
 
         func fetchEpisodes(urls: [String], completion: @escaping (Result<[Episode], Error>) -> Void) {
