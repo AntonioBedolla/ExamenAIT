@@ -9,38 +9,6 @@ import SwiftUI
 
 struct CharacterDetailView: View {
     
-
-    
-    /*@ObservedObject var viewModel: CharacterDetailViewModel
-
-        var body: some View {
-            VStack(spacing: 12) {
-                AsyncImage(url: URL(string: viewModel.character.image)) { image in
-                    image.resizable()
-                } placeholder: {
-                    ProgressView()
-                }
-                .frame(width: 200, height: 200)
-                .clipShape(Circle())
-
-                Text(viewModel.character.name).font(.title)
-                Text("Status: \(viewModel.character.status)")
-                Text("Species: \(viewModel.character.species)")
-                Text("Gender: \(viewModel.character.gender)")
-                Text("Origin: \(viewModel.character.origin.name)")
-                Text("Location: \(viewModel.character.location.name)")
-
-                NavigationLink("Ver en mapa") {
-                    MapView()
-                }
-            }
-            .padding()
-            .navigationTitle("Detalle")
-            //NavigationLink("Ver mapa"){
-                //MapView()
-            //}
-        }*/
-    
     let character: Character
     @StateObject private var viewModel: CharacterDetailViewModel
     
