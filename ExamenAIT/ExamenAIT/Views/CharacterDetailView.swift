@@ -98,6 +98,12 @@ struct CharacterDetailView: View {
                                 }
                                 Spacer()
                                 // Checkbox de "Visto"
+                                Button(action: { viewModel.toggleWatched(episode)
+                                }) {
+                                    Image(systemName: viewModel.isWatched(episode) ? "checkmark.square.fill" : "square")
+                                        .foregroundColor(.blue)
+                                        .font(.title2)
+                                }
                                 HStack {
                                     Spacer()
                                     Button(action: {

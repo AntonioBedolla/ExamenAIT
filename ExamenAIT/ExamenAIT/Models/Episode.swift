@@ -11,4 +11,5 @@ struct Episode: Identifiable, Codable, Equatable {
     let id: Int
     let name: String
     let episode: String
+    var isWatchedd: Bool = false
 }

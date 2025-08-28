@@ -29,6 +29,7 @@
 		C804E60B2E175A53009B312A /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E60A2E175A53009B312A /* FavoritesManager.swift */; };
 		C804E60D2E175AD0009B312A /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E60C2E175AD0009B312A /* FavoritesView.swift */; };
 		C804E60F2E1763BD009B312A /* CharacterListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C804E60E2E1763BD009B312A /* CharacterListViewModelTests.swift */; };
+		C83BFF9D2E5FCA4500409F70 /* WatchedEpisodesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BFF9C2E5FCA4500409F70 /* WatchedEpisodesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		C804E60A2E175A53009B312A /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
 		C804E60C2E175AD0009B312A /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		C804E60E2E1763BD009B312A /* CharacterListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModelTests.swift; sourceTree = "<group>"; };
+		C83BFF9C2E5FCA4500409F70 /* WatchedEpisodesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchedEpisodesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				C804E60A2E175A53009B312A /* FavoritesManager.swift */,
+				C83BFF9C2E5FCA4500409F70 /* WatchedEpisodesManager.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				C804E6002E16CF2B009B312A /* MapView.swift in Sources */,
 				C804E5FC2E16CE4A009B312A /* CharacterListView.swift in Sources */,
 				C804E5EE2E16CA26009B312A /* Character.swift in Sources */,
+				C83BFF9D2E5FCA4500409F70 /* WatchedEpisodesManager.swift in Sources */,
 				C804E6062E17506F009B312A /* CharacterRow.swift in Sources */,
 				C804E5FE2E16CE74009B312A /* CharacterDetailView.swift in Sources */,
 				C804E6022E16CF7E009B312A /* MapLocation.swift in Sources */,
@@ -539,6 +543,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExamenAIT/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Usamos Face ID para proteger tu lista de favoritos";
@@ -568,6 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ExamenAIT/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Usamos Face ID para proteger tu lista de favoritos";

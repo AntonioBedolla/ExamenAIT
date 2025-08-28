@@ -14,6 +14,7 @@ class CharacterDetailViewModel: ObservableObject {
 
         private let apiService: APIServiceProtocol
         private let character: Character
+        private let watchedManager = WatchedEpisodesManager.shared
 
         init(character: Character, apiService: APIServiceProtocol) {
             self.character = character
@@ -35,4 +36,15 @@ class CharacterDetailViewModel: ObservableObject {
                 }
             }
         }
+    
+    // Marcar/desmarcar episodio como visto
+    func toggleWatched(_ episode: Episode) {
+        watchedManager.toggleWatched(id: episode.id)
+        objectWillChange.send() // Forzar actualización en la vista
+    }
+    
+    // Saber si un episodio esta visto
+    func isWatched(_ episode: Episode) -> Bool {
+        watchedManager.isWatched(id: episode.id)
+    }
 }
